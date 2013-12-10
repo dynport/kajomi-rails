@@ -1,6 +1,6 @@
 # Kajomi::Rails
 
-TODO: Write a gem description
+A plug-in for ActionMailer to send emails via Kajomi Mail API, based on the kajomi gem.
 
 ## Installation
 
@@ -21,9 +21,15 @@ Add this to your config/application.rb or environments/production.rb:
 ``` ruby
 config.action_mailer.delivery_method = :kajomi
 config.action_mailer.kajomi_settings = {
-  api_key: "your-api-key"
+  api_key: "your-api-key",
+  user: "your-user-name"
 }
 ```
+
+## Requirements
+
+* `kajomi` gem
+* Kajomi Mail account with an API key
 
 ## Contributing
 
