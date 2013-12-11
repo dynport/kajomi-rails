@@ -21,15 +21,15 @@ Add this to your config/application.rb or environments/production.rb:
 ``` ruby
 config.action_mailer.delivery_method = :kajomi
 config.action_mailer.kajomi_settings = {
-  api_key: "your-api-key",
-  user: "your-user-name"
+  shared_key: "your-shared-key",
+  secret_key: "your-secret-key"
 }
 ```
 
 ## Requirements
 
 * `kajomi` gem
-* Kajomi Mail account with an API key
+* Kajomi Mail API account with a your shared and secret key
 
 ## Contributing
 

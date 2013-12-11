@@ -6,7 +6,7 @@ module Kajomi
     extend self
 
     def install
-      settings = {api_key: nil, user: nil}
+      settings = {shared_key: nil, secret_key: nil}
       ActionMailer::Base.add_delivery_method :kajomi, Mail::Kajomi, settings
     end
   end

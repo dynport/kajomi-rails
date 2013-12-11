@@ -3,14 +3,14 @@ require 'spec_helper'
 describe "Kajomi::Rails" do
   let(:api_client) { Kajomi::ApiClient.new("dynport", "KAJOMI_API_KEY") }
 
-  it "should set the api key" do
-    ActionMailer::Base.kajomi_settings = {api_key: "KAJOMI_API_KEY", user: "dynport"}
-    ActionMailer::Base.kajomi_settings[:api_key].should == "KAJOMI_API_KEY"
+  it "should set the shared key" do
+    ActionMailer::Base.kajomi_settings = {shared_key: "dynport", secret_key: "KAJOMI_SECRET_KEY"}
+    ActionMailer::Base.kajomi_settings[:shared_key].should == "dynport"
   end
 
-  it "should set the user" do
-    ActionMailer::Base.kajomi_settings = {api_key: "KAJOMI_API_KEY", user: "dynport"}
-    ActionMailer::Base.kajomi_settings[:user].should == "dynport"
+  it "should set the secret key" do
+    ActionMailer::Base.kajomi_settings = {secret_key: "KAJOMI_SECRET_KEY", shared_key: "dynport"}
+    ActionMailer::Base.kajomi_settings[:secret_key].should == "KAJOMI_SECRET_KEY"
   end
 
   it "should use kajomi for delivery" do
