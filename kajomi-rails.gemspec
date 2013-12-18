@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
-  s.add_dependency 'actionmailer', ">= 3.0.0"
+  s.add_dependency 'actionmailer'
   s.add_dependency 'kajomi'
   s.add_dependency 'multi_json'
   s.add_development_dependency 'rspec'
