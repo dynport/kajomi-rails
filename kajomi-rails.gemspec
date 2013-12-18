@@ -17,5 +17,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.add_dependency 'actionmailer', ">= 3.0.0"
   s.add_dependency 'kajomi'
+  s.add_dependency 'multi_json'
   s.add_development_dependency 'rspec'
 end
